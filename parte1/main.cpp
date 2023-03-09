@@ -1,5 +1,7 @@
 #include <iostream>
-#include <ctime> // biblioteca para obtener la hora del sistema
+#include <ctime>
+#include <list>
+
 
 using namespace std;
 
