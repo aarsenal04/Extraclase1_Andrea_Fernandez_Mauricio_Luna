@@ -31,6 +31,7 @@ public:
 
     // Sobrecarga de operador delete
     void operator delete(void* ptr);
+
 };
 class List {
 private:
@@ -38,7 +39,7 @@ private:
 
 public:
     List() : head(nullptr) {}
-    ~List() {}
+    ~List() = default;
 
     Node* getHead() const {
         return head;
