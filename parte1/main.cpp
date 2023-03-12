@@ -1,22 +1,19 @@
-// C++ program for the above approach
 #include <iostream>
 using namespace std;
 
-// Node class to represent
-// a node of the linked list.
 class Node {
 public:
     int data;
     Node* next; // puntero al siguiente nodo
 
-    // Default constructor
+    // constructor
     Node()
     {
         data = 0;
         next = NULL;
     }
 
-    // Parameterised Constructor
+    // constructor con parametros
     Node(int data)
     {
         this->data = data;
@@ -46,8 +43,6 @@ public:
 
 };
 
-// Linked list class to
-// implement a linked list.
 class Linkedlist {
     Node* head;
 
@@ -76,89 +71,84 @@ void Linkedlist::deleteNode(int nodeOffset)
         return;
     }
 
-    // Find length of the linked-list.
+    // tamaño de la lista enlazada
     while (temp1 != NULL) {
         temp1 = temp1->next;
         ListLen++;
     }
 
-    // Check if the position to be
-    // deleted is greater than the length
-    // of the linked list.
+    // revisando la posición de la lista
     if (ListLen < nodeOffset) {
         cout << "Index out of range"
              << endl;
         return;
     }
 
-    // Declare temp1
+    // Declaración de temp1
     temp1 = head;
 
-    // Deleting the head.
+    // borrar head
     if (nodeOffset == 1) {
 
-        // Update head
+        // modificar head
         head = head->next;
         delete temp1;
         return;
     }
 
-    // Traverse the list to
-    // find the node to be deleted.
+    // encontrar el nodo en la lista para modificarlo
     while (nodeOffset-- > 1) {
 
-        // Update temp2
+
         temp2 = temp1;
 
-        // Update temp1
+
         temp1 = temp1->next;
     }
 
-    // Change the next pointer
-    // of the previous node.
+    // cambiar el puntero
     temp2->next = temp1->next;
 
-    // Delete the node
+    // borrar el nodo
     delete temp1;
 }
 
-// Function to insert a new node.
+// insertar nuevo nodo
 void Linkedlist::insertNode(int data)
 {
-    // Create the new Node.
+    // Crear nuevo nodo
     Node* newNode = new Node(data);
 
-    // Assign to head
+    // Asignación al head
     if (head == NULL) {
         head = newNode;
         return;
     }
 
-    // Traverse till end of list
+    // revisar hasta el final de la lista
     Node* temp = head;
     while (temp->next != NULL) {
 
-        // Update temp
+        // modificar temp
         temp = temp->next;
     }
 
-    // Insert at the last.
+    // insertar por último
     temp->next = newNode;
 }
 
-// Function to print the
-// nodes of the linked list.
+// Función para imprimir los nodos de la lista
 void Linkedlist::printList()
 {
     Node* temp = head;
 
-    // Check for empty list.
+    // revisar lista vacía
     if (head == NULL) {
         cout << "List empty" << endl;
         return;
     }
 
-    // Traverse the list.
+    // revisar lista
     while (temp != NULL) {
         cout << temp->data << " ";
         temp = temp->next;
@@ -173,23 +163,20 @@ void Linkedlist::setHead(Node *head) {
     Linkedlist::head = head;
 }
 
-// Driver Code
 int main()
 {
     Linkedlist list;
 
-    // Inserting nodes
+    // insertando nodos
     list.insertNode(1);
     list.insertNode(5);
 
     cout << "Elements of the list are: ";
 
-    // Print the list
+    // imprimir lista
     list.printList();
     cout << endl;
 
-    // Delete node at position 2.
-    //  list.deleteNode(2);
     cout << list.getHead() << endl;
     return 0;
 }
