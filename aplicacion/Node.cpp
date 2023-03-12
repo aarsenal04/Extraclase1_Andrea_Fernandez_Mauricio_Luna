@@ -3,10 +3,10 @@
  * @version 1.0
  * @date 11/03/2023
  * @authors Mauricioluna & AndreaFernandez
- * @title Node de la aplicación
- * @brief Almacena un valor de tipo int y un
- * puntero al siguiente así como sus métodos
- * para consultar o modificar sus datos.
+ */
+
+/**
+ * @brief Almacena un valor de tipo int y un puntero al siguiente así como sus métodos para consultar o modificar sus datos.
  */
 
 #include "Node.h"

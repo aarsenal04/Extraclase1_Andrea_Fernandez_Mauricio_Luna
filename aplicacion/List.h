@@ -3,7 +3,10 @@
  * @version 1.0
  * @date 12/03/2023
  * @authors Mauricioluna & AndreaFernandez
- * @title Header de List en la aplicación.
+ *
+ */
+
+/**
  * @brief Definición de List.
  */
 

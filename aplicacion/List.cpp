@@ -3,7 +3,10 @@
  * @version 1.0
  * @date 11/03/2023
  * @authors Mauricioluna & AndreaFernandez
- * @title Lista de la aplicación
+ */
+
+/**
+ *
  * @brief Lista enlazada simple formada por objetos de tipo Node.
  */
 

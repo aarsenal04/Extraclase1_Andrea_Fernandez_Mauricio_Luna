@@ -3,13 +3,12 @@
  * @version 1.0
  * @date 11/03/2023
  * @authors Mauricioluna & AndreaFernandez
- * @title Main de la aplicación
- * @brief El objetivo de esta aplicación es practicar
- * el concepto de gestión de memoria desde la perspectiva
- * de la codificación del software con el lenguaje de
- * programación C++ así como para utilizar punteros en la
- * implementación de estructuras de datos lineales y jerárquicas.
  */
+
+/**
+ * @brief El objetivo de esta aplicación es practicar el concepto de gestión de memoria desde la perspectiva de la codificación del software con el lenguaje de programación C++ así como para utilizar punteros en la implementación de estructuras de datos lineales y jerárquicas.
+ */
+
 #include <iostream>
 #include "Node.h"
 #include "List.h"

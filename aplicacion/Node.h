@@ -3,7 +3,9 @@
  * @version 1.0
  * @date 12/03/2023
  * @authors Mauricioluna & AndreaFernandez
- * @title Header de Node en la aplicación.
+ */
+
+/**
  * @brief Definición de Node.
  */
 

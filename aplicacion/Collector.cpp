@@ -3,7 +3,10 @@
  * @version 1.0
  * @date 12/03/2023
  * @authors Mauricioluna & AndreaFernandez
- * @title Collector de la aplicación
+ *
+ */
+
+/**
  * @brief Es el responsable de reciclar la memoria liberada en List.
  */
 
