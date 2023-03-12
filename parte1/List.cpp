@@ -12,6 +12,10 @@
 
 using namespace std;
 
+/**
+ * @brief Este es el constructor, el cual inicializa el tamaño de la lista size en 0, su head en nullptr y crea un nuevo obj Collector guardándolo en el puntero de reciclaje.
+ * @return no devuelve valor.
+ */
 List::List() {
     size = 0;
     head = nullptr;
@@ -19,6 +23,12 @@ List::List() {
 
 List::~List() {}
 
+/**
+ *
+ * @brief en este método se inserta un nuevo nodo al final de la lista con el valor data.
+ * @param data El valor que se le asignará al nuevo nodo.
+ * @return No devuelve valor
+ */
 void List::insertLast(int data) {
 /**
  * @brief primero se verifica si existe un nodo disponible en Collector con el metódo available().
@@ -43,6 +53,12 @@ void List::insertLast(int data) {
     size++;
 }
 
+/**
+ *
+ * @brief En este método se inserta un nuevo nodo al inicio de la lista con el valor data.
+ * @param data EL valor por asignar al nuevo nodo.
+ * @return no devuelve valor.
+ */
 void List::insertFirst(int data) {
 /**
  * @brief primero verifica si existe un nodo disponible en Collector con available().
@@ -127,14 +143,19 @@ void List::deleteNode(int value) {
  */
 void List::printList() const {
     Node* temp = head;
-
+    /**
+     * @brief revisa si la lista está vacía.
+     * @return devuelve un mensaje de lista vacía y vuelve a printList().
+     */
     if (head == nullptr){
         cout << "lista vacía" << endl;
         return;
     }
-
     cout << "Lista: ";
-
+    /**
+     * @brief si no está vacía.
+     * @return devuelve el valor de data de cada nodo en la lista desde head.
+     */
     while (temp != nullptr) {
         cout << "Valor: "<< temp->data << " Memoria: "<< temp << endl;
         temp = temp->next;

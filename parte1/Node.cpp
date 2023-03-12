@@ -27,6 +27,10 @@ Node::Node() {
     next = nullptr;
 }
 
+/**
+ * @brief toma un argumento entero, inicializa el dato a su valor pasado y los punteros al siguiente nodo, luego el eliminado a nulo.
+ * @param d
+ */
 Node::Node(int d) {
     this->data = d;
     next = nullptr;
