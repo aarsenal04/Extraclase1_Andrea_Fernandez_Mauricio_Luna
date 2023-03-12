@@ -27,7 +27,7 @@ class List;
 class Collector;
 
 /**
- * @brief Se define la clase Node con su lista enlazada.
+ * @brief Definición de Node
  */
 class Node {
     /**
