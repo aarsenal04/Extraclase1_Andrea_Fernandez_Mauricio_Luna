@@ -1,15 +1,10 @@
-//
-// Created by mauluna52 on 9/03/23.
-//
-
 #ifndef PRACTICASDATOS2_NODE_H
 #define PRACTICASDATOS2_NODE_H
 #include <iostream>
 
 using namespace std;
 
-// Node class to represent
-// a node of the linked list.
+// clase nodo con lista enlazada
 class Node {
 public:
 
@@ -17,10 +12,10 @@ public:
 
     Node* next; // puntero al siguiente nodo
     
-    // Default constructor
+    // Constructor
     Node();
 
-    // Parameterised Constructor
+    // Constructor con parámetros
     Node(int data);
 
     int getData() const;
@@ -29,4 +24,4 @@ public:
 };
 
 
-#endif //PRACTICASDATOS2_NODE_H
+#endif

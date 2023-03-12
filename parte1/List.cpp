@@ -1,18 +1,12 @@
-//
-// Created by mauluna52 on 9/03/23.
-//
-
 #include "List.h"
 #include "Collector.h"
 #include "Node.h"
-
 
 using namespace std;
 
 List::List() {
     size = 0;
     head = nullptr;
-    //reciclaje = new Collector();
 }
 
 int List::getHead() {
@@ -70,12 +64,4 @@ void List::printList() {
         cout << temp->data << " ";
         temp = temp->next;
     }
-
 }
-
-
-
-
-
-
-
