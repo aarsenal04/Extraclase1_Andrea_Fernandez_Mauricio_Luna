@@ -1,14 +1,30 @@
 #ifndef PRACTICASDATOS2_COLLECTOR_H
 #define PRACTICASDATOS2_COLLECTOR_H
-#include "Node.h"
+
+class Node;
 
 class Collector {
 
+
+private:
+    Node* Chead;
+    int size;
+
 public:
-    Node* head;
+
 
     Collector();
 
+    void insertNode(Node* node);
+
+    int getSize();
+
+    void printCollector() const;
+
+    Node* giveNode();
+
 };
+
+
 
 #endif

@@ -1,23 +1,26 @@
 #ifndef PRACTICASDATOS2_LIST_H
 #define PRACTICASDATOS2_LIST_H
+
 #include "Node.h"
 #include "Collector.h"
 
 class List {
+    friend class Collector;
 
 public:
-
-    int size;
-    Node* head;
-    Collector* reciclaje;
-
     List();
+    ~List();
 
-    int getHead();
     void insertLast(int data);
     void insertFirst(int data);
-    void printList();
+    void deleteNode(int value);
+    void printList() const;
 
+    //static Collector* reciclaje;
+private:
+    // Puntero al collector
+    Node* head;
+    int size;
 };
 
 #endif
