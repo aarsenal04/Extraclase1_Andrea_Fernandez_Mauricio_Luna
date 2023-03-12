@@ -1,0 +1,124 @@
+\hypertarget{class_collector}{}\doxysection{Referencia de la Clase Collector}
+\label{class_collector}\index{Collector@{Collector}}
+
+
+Definición de \mbox{\hyperlink{class_collector}{Collector}}.  
+
+
+
+
+{\ttfamily \#include $<$Collector.\+h$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_collector_ad60b06491094b8fddf25502cf162cdf6}{Collector}} ()
+\begin{DoxyCompactList}\small\item\em Inicializa el puntero Chead a nulo y su tamaño a 0. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_collector_a95e96017da5dbb3a6db77fc348f07e3c}{insert\+Node}} (\mbox{\hyperlink{class_node}{Node}} $\ast$node)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_collector_a95e96017da5dbb3a6db77fc348f07e3c}{insert\+Node()}} agrega un nodo al inicio de la lista enlazada del objeto \mbox{\hyperlink{class_collector}{Collector}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_collector_a1deb8688a3bbf0c90fc21f85eccf521b}{get\+Size}} ()
+\begin{DoxyCompactList}\small\item\em obtiene el tamaño actual de \mbox{\hyperlink{class_collector}{Collector}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_collector_a70443a542969f2ef0abb7b8657d6940b}{print\+Collector}} () const
+\begin{DoxyCompactList}\small\item\em imprime el contenido en \mbox{\hyperlink{class_collector}{Collector}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node}{Node}} $\ast$ \mbox{\hyperlink{class_collector_a467cebda2acfc5946a7932115e17ea51}{give\+Node}} ()
+\begin{DoxyCompactList}\small\item\em elimina un nodo empezando la lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Definición de \mbox{\hyperlink{class_collector}{Collector}}. 
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_collector_ad60b06491094b8fddf25502cf162cdf6}\label{class_collector_ad60b06491094b8fddf25502cf162cdf6}} 
+\index{Collector@{Collector}!Collector@{Collector}}
+\index{Collector@{Collector}!Collector@{Collector}}
+\doxysubsubsection{\texorpdfstring{Collector()}{Collector()}}
+{\footnotesize\ttfamily Collector\+::\+Collector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicializa el puntero Chead a nulo y su tamaño a 0. 
+
+Inicializa un objeto \mbox{\hyperlink{class_collector}{Collector}} poniendo el puntero al primer nodo nulo y tamaño cero. 
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_collector_a1deb8688a3bbf0c90fc21f85eccf521b}\label{class_collector_a1deb8688a3bbf0c90fc21f85eccf521b}} 
+\index{Collector@{Collector}!getSize@{getSize}}
+\index{getSize@{getSize}!Collector@{Collector}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily int Collector\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+obtiene el tamaño actual de \mbox{\hyperlink{class_collector}{Collector}} 
+
+\mbox{\hyperlink{class_collector_a1deb8688a3bbf0c90fc21f85eccf521b}{get\+Size()}} obtiene el tamaño de nodos almacenados en \mbox{\hyperlink{class_collector}{Collector}}.
+
+\begin{DoxyReturn}{Devuelve}
+valor actual de size en \mbox{\hyperlink{class_collector}{Collector}}. size se actualiza cuando se insertan/eliminan nodos de \mbox{\hyperlink{class_collector}{Collector}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_collector_a467cebda2acfc5946a7932115e17ea51}\label{class_collector_a467cebda2acfc5946a7932115e17ea51}} 
+\index{Collector@{Collector}!giveNode@{giveNode}}
+\index{giveNode@{giveNode}!Collector@{Collector}}
+\doxysubsubsection{\texorpdfstring{giveNode()}{giveNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_node}{Node}} $\ast$ Collector\+::give\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+elimina un nodo empezando la lista. 
+
+\begin{DoxyReturn}{Devuelve}
+nodo desde \mbox{\hyperlink{class_collector}{Collector}}.
+
+si el collector está vacío devuelve nulo, si no, devuelve el nodo por reutilizar. 
+\end{DoxyReturn}
+nuevo puntero node\+Togive en Chead (primer nodo en \mbox{\hyperlink{class_collector}{Collector}}).
+
+se actualiza Chead para el siguiente nodo en \mbox{\hyperlink{class_collector}{Collector}}.
+
+Se establece el puntero next del nodo a devolver en nulo (separado de la lista enlazada).
+
+Contador de tamaño del \mbox{\hyperlink{class_collector}{Collector}} se reduce en 1.
+
+Vuelve al nodo recuperado.\mbox{\Hypertarget{class_collector_a95e96017da5dbb3a6db77fc348f07e3c}\label{class_collector_a95e96017da5dbb3a6db77fc348f07e3c}} 
+\index{Collector@{Collector}!insertNode@{insertNode}}
+\index{insertNode@{insertNode}!Collector@{Collector}}
+\doxysubsubsection{\texorpdfstring{insertNode()}{insertNode()}}
+{\footnotesize\ttfamily void Collector\+::insert\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_node}{Node}} $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_collector_a95e96017da5dbb3a6db77fc348f07e3c}{insert\+Node()}} agrega un nodo al inicio de la lista enlazada del objeto \mbox{\hyperlink{class_collector}{Collector}}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em node} & se inserta en la lista de \mbox{\hyperlink{class_collector}{Collector}}.\\
+\hline
+{\em node} & nuevo head en la lista si se encuentra vacía. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_collector_a70443a542969f2ef0abb7b8657d6940b}\label{class_collector_a70443a542969f2ef0abb7b8657d6940b}} 
+\index{Collector@{Collector}!printCollector@{printCollector}}
+\index{printCollector@{printCollector}!Collector@{Collector}}
+\doxysubsubsection{\texorpdfstring{printCollector()}{printCollector()}}
+{\footnotesize\ttfamily void Collector\+::print\+Collector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+imprime el contenido en \mbox{\hyperlink{class_collector}{Collector}}. 
+
+\mbox{\hyperlink{class_collector_a70443a542969f2ef0abb7b8657d6940b}{print\+Collector()}} imprime los nodos almacenado en \mbox{\hyperlink{class_collector}{Collector}}. Puntero temporal al head del \mbox{\hyperlink{class_collector}{Collector}}.
+
+\begin{DoxyReturn}{Devuelve}
+mensaje que avisa cuando el head en \mbox{\hyperlink{class_collector}{Collector}} es nulo.
+\end{DoxyReturn}
+Recorre la lista enlazada desde el nodo Chead al siguiente nodo en cada iteración hasta el final.
+
+\begin{DoxyReturn}{Devuelve}
+dirección de memoria del nodo actual.
+\end{DoxyReturn}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Gollo/\+CLion\+Projects/\+Practicas\+Datos2/aplicacion/\mbox{\hyperlink{_collector_8h}{Collector.\+h}}\item 
+C\+:/\+Users/\+Gollo/\+CLion\+Projects/\+Practicas\+Datos2/aplicacion/\mbox{\hyperlink{_collector_8cpp}{Collector.\+cpp}}\end{DoxyCompactItemize}

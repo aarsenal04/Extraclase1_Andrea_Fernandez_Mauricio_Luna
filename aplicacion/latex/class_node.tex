@@ -1,0 +1,170 @@
+\hypertarget{class_node}{}\doxysection{Referencia de la Clase Node}
+\label{class_node}\index{Node@{Node}}
+
+
+Definición de \mbox{\hyperlink{class_node}{Node}}.  
+
+
+
+
+{\ttfamily \#include $<$Node.\+h$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_node_ad7a34779cad45d997bfd6d3d8043c75f}{Node}} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node_a0d68253f48f4deb1e078ef6cf08a5bf4}{Node}} (int data)
+\begin{DoxyCompactList}\small\item\em toma un argumento entero, inicializa el dato a su valor pasado y los punteros al siguiente nodo, luego el eliminado a nulo. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{class_node_ad93f4bb54e5f2759c8f903fd2d740267}{operator new}} (size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Sobrecarga del operador new para permitir la asignación de memoria dinámica. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_node_a5e1c4d489ad2b220b54c04cac5d3950d}{operator delete}} (void $\ast$p)
+\begin{DoxyCompactList}\small\item\em Sobrecarga del operador delete para liberar la memoria asignada dinámicamente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_node_ac1ec04206111c3d52aaf89ba31a8ce9b}{set\+Reciclaje}} (\mbox{\hyperlink{class_collector}{Collector}} $\ast$collector)
+\begin{DoxyCompactList}\small\item\em Método público estático de \mbox{\hyperlink{class_node}{Node}} para definir el recolector de tipo \mbox{\hyperlink{class_collector}{Collector}} para la clase \mbox{\hyperlink{class_node}{Node}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_collector}{Collector}} $\ast$ \mbox{\hyperlink{class_node_a55844ddddeae63c0e7dace36fe9c8c2a}{reciclaje}} = nullptr
+\begin{DoxyCompactList}\small\item\em Puntero estático al obj \mbox{\hyperlink{class_collector}{Collector}} para reciclar memoria. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_node_a8cee552d09eaeb60a09d95309a87b498}{List}}
+\begin{DoxyCompactList}\small\item\em Las clases \mbox{\hyperlink{class_list}{List}} y \mbox{\hyperlink{class_collector}{Collector}} pueden acceder a private de la clase \mbox{\hyperlink{class_node}{Node}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_node_a85a0fc5a617106954db31a0e1233517f}{Collector}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Definición de \mbox{\hyperlink{class_node}{Node}}. 
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_node_ad7a34779cad45d997bfd6d3d8043c75f}\label{class_node_ad7a34779cad45d997bfd6d3d8043c75f}} 
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor por defecto. 
+
+Su constructor inicializa el dato en 0 y su puntero al siguiente nodo como nulo.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em data} & con argumento int \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_node_a0d68253f48f4deb1e078ef6cf08a5bf4}\label{class_node_a0d68253f48f4deb1e078ef6cf08a5bf4}} 
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}\item[{int}]{d }\end{DoxyParamCaption})}
+
+
+
+toma un argumento entero, inicializa el dato a su valor pasado y los punteros al siguiente nodo, luego el eliminado a nulo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em d} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_node_a5e1c4d489ad2b220b54c04cac5d3950d}\label{class_node_a5e1c4d489ad2b220b54c04cac5d3950d}} 
+\index{Node@{Node}!operator delete@{operator delete}}
+\index{operator delete@{operator delete}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{operator delete()}{operator delete()}}
+{\footnotesize\ttfamily void Node\+::operator delete (\begin{DoxyParamCaption}\item[{void $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Sobrecarga del operador delete para liberar la memoria asignada dinámicamente. 
+
+sobrecarga del operador delete para liberar memoria dinámicamente utilizada por los obj \mbox{\hyperlink{class_node}{Node}}.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+Convierte el puntero genérico como argumento a la función en un puntero específico \mbox{\hyperlink{class_node}{Node}}.
+
+Se comprueba si reciclaje está inicializado.
+
+Se inserta el nodo en el recolector para luego utilizarlo en caso de que exista reciclaje.
+
+Se libera memoria utilizada por el nodo si no hay recolector.\mbox{\Hypertarget{class_node_ad93f4bb54e5f2759c8f903fd2d740267}\label{class_node_ad93f4bb54e5f2759c8f903fd2d740267}} 
+\index{Node@{Node}!operator new@{operator new}}
+\index{operator new@{operator new}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{operator new()}{operator new()}}
+{\footnotesize\ttfamily void $\ast$ Node\+::operator new (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Sobrecarga del operador new para permitir la asignación de memoria dinámica. 
+
+Sobrecarga al operador new para la clase \mbox{\hyperlink{class_node}{Node}} que permite crear un nuevo obj \mbox{\hyperlink{class_node}{Node}} en la memoria dinámica. Comprueba si hay objetos \mbox{\hyperlink{class_node}{Node}} eliminados en reciclaje Si reciclaje es nulo o si no tiene nodos, se crea un nuevo obj \mbox{\hyperlink{class_node}{Node}} size asigna memoria del tamaño requerido
+
+Si hay nodos en el recolector, se devuelve el primer nodo almacenado en el recolector. (se reutiliza la memoria)\mbox{\Hypertarget{class_node_ac1ec04206111c3d52aaf89ba31a8ce9b}\label{class_node_ac1ec04206111c3d52aaf89ba31a8ce9b}} 
+\index{Node@{Node}!setReciclaje@{setReciclaje}}
+\index{setReciclaje@{setReciclaje}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{setReciclaje()}{setReciclaje()}}
+{\footnotesize\ttfamily void Node\+::set\+Reciclaje (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collector}{Collector}} $\ast$}]{collector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Método público estático de \mbox{\hyperlink{class_node}{Node}} para definir el recolector de tipo \mbox{\hyperlink{class_collector}{Collector}} para la clase \mbox{\hyperlink{class_node}{Node}}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em collector} & recicla memoria desde función estática que lo define.\\
+\hline
+{\em collector} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentación de las funciones relacionadas y clases amigas}
+\mbox{\Hypertarget{class_node_a85a0fc5a617106954db31a0e1233517f}\label{class_node_a85a0fc5a617106954db31a0e1233517f}} 
+\index{Node@{Node}!Collector@{Collector}}
+\index{Collector@{Collector}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{Collector}{Collector}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_collector}{Collector}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_node_a8cee552d09eaeb60a09d95309a87b498}\label{class_node_a8cee552d09eaeb60a09d95309a87b498}} 
+\index{Node@{Node}!List@{List}}
+\index{List@{List}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{List}{List}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_list}{List}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Las clases \mbox{\hyperlink{class_list}{List}} y \mbox{\hyperlink{class_collector}{Collector}} pueden acceder a private de la clase \mbox{\hyperlink{class_node}{Node}}. 
+
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_node_a55844ddddeae63c0e7dace36fe9c8c2a}\label{class_node_a55844ddddeae63c0e7dace36fe9c8c2a}} 
+\index{Node@{Node}!reciclaje@{reciclaje}}
+\index{reciclaje@{reciclaje}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{reciclaje}{reciclaje}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_collector}{Collector}} $\ast$ Node\+::reciclaje = nullptr\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Puntero estático al obj \mbox{\hyperlink{class_collector}{Collector}} para reciclar memoria. 
+
+Se inicializa el puntero estático de \mbox{\hyperlink{class_node}{Node}} (reciclaje) como nulo que indica la falta de recolector. 
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Gollo/\+CLion\+Projects/\+Practicas\+Datos2/aplicacion/\mbox{\hyperlink{_node_8h}{Node.\+h}}\item 
+C\+:/\+Users/\+Gollo/\+CLion\+Projects/\+Practicas\+Datos2/aplicacion/\mbox{\hyperlink{_node_8cpp}{Node.\+cpp}}\end{DoxyCompactItemize}

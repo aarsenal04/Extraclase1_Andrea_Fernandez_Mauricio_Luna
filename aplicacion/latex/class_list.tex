@@ -1,0 +1,185 @@
+\hypertarget{class_list}{}\doxysection{Referencia de la Clase List}
+\label{class_list}\index{List@{List}}
+
+
+Definición de \mbox{\hyperlink{class_list}{List}}.  
+
+
+
+
+{\ttfamily \#include $<$List.\+h$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_list_a64d878a92d11f7c63c70cbe4e7dd4176}{List}} ()
+\begin{DoxyCompactList}\small\item\em Constructor y destructor de \mbox{\hyperlink{class_list}{List}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_list_a70aecf37bd9d779a394e4d50377fbf5f}{$\sim$\+List}} ()
+\begin{DoxyCompactList}\small\item\em Destructor de la clase \mbox{\hyperlink{class_list}{List}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_list_a8bd34457b738fc2f7c8ca376f3cf1bf5}{insert\+Last}} (int data)
+\begin{DoxyCompactList}\small\item\em Luego se elimina un nodo value de la lista y se imprimen los valores de todos los nodos de la Lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_list_abd6c408c17a6ff9404401526b50105d9}{insert\+First}} (int data)
+\begin{DoxyCompactList}\small\item\em Método para insertar un nuevo nodo al principio de la lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_list_a00a08c46908207950774ca626a200999}{delete\+Node}} (int value)
+\begin{DoxyCompactList}\small\item\em delete\+Node elimina un nodo con un valor específico de la lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_list_aaa21c2630d821e1b6d718939338b8694}{print\+List}} () const
+\begin{DoxyCompactList}\small\item\em print\+List recorre la lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_list_a85a0fc5a617106954db31a0e1233517f}{Collector}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Definición de \mbox{\hyperlink{class_list}{List}}. 
+
+Comprueba que el header no se incluya varias veces en su mismo origen. entonces si no se ha definido, los demás archivos pueden funcionar, si no entonces omite su funcionamiento.
+
+declaración de la clase \mbox{\hyperlink{class_list}{List}} y permisos a \mbox{\hyperlink{class_collector}{Collector}} para que tenga aceeso al private de la clase \mbox{\hyperlink{class_list}{List}}. 
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_list_a64d878a92d11f7c63c70cbe4e7dd4176}\label{class_list_a64d878a92d11f7c63c70cbe4e7dd4176}} 
+\index{List@{List}!List@{List}}
+\index{List@{List}!List@{List}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily List\+::\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor y destructor de \mbox{\hyperlink{class_list}{List}}. 
+
+Constructor de la clase \mbox{\hyperlink{class_list}{List}}, inicializa el tamaño de la lista en 0 y el puntero al head de la lista como nulo. \mbox{\Hypertarget{class_list_a70aecf37bd9d779a394e4d50377fbf5f}\label{class_list_a70aecf37bd9d779a394e4d50377fbf5f}} 
+\index{List@{List}!````~List@{$\sim$List}}
+\index{````~List@{$\sim$List}!List@{List}}
+\doxysubsubsection{\texorpdfstring{$\sim$List()}{~List()}}
+{\footnotesize\ttfamily List\+::$\sim$\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor de la clase \mbox{\hyperlink{class_list}{List}}. 
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_list_a00a08c46908207950774ca626a200999}\label{class_list_a00a08c46908207950774ca626a200999}} 
+\index{List@{List}!deleteNode@{deleteNode}}
+\index{deleteNode@{deleteNode}!List@{List}}
+\doxysubsubsection{\texorpdfstring{deleteNode()}{deleteNode()}}
+{\footnotesize\ttfamily void List\+::delete\+Node (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+delete\+Node elimina un nodo con un valor específico de la lista. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em value} & se desea eliminar de la lista. \\
+\hline
+\end{DoxyParams}
+Se verifica si la lista está vacía \begin{DoxyReturn}{Devuelve}
+mensaje que indica el estado de la lista
+\end{DoxyReturn}
+se verifica si el valor por eliminar se encuentra en el primer nodo de la lista.
+
+Se crea un puntero que apunta a head , asigna el nodo siguiente de head como nuevo nodo del mismo.
+
+Se establece el siguiente nodo como nulo. \begin{DoxyReturn}{Devuelve}
+dirección de memoria de delte\+\_\+node.
+\end{DoxyReturn}
+y finalmente se elimina
+
+Si el valor no se encuentra en el primer nodo, dentro del bucle while se busca el nodo que contiene el valor indicado.
+
+Si se encuentra entonces se crea un puntero deleted\+\_\+node que apunta al nodo que contiene el valor, se define el siguiente nodo del nodo actual como el siguiente nodo del que contiene el valor.
+
+se define el siguiente nodo de deleted\+\_\+node como nulo \begin{DoxyReturn}{Devuelve}
+dirección de memoria de deleted\+\_\+node.
+\end{DoxyReturn}
+finalmente se elimina.
+
+\begin{DoxyReturn}{Devuelve}
+Si no se encuentra el valor en la lista, se imprime un mensaje indicando que el valor no se encontró.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_list_abd6c408c17a6ff9404401526b50105d9}\label{class_list_abd6c408c17a6ff9404401526b50105d9}} 
+\index{List@{List}!insertFirst@{insertFirst}}
+\index{insertFirst@{insertFirst}!List@{List}}
+\doxysubsubsection{\texorpdfstring{insertFirst()}{insertFirst()}}
+{\footnotesize\ttfamily void List\+::insert\+First (\begin{DoxyParamCaption}\item[{int}]{data }\end{DoxyParamCaption})}
+
+
+
+Método para insertar un nuevo nodo al principio de la lista. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em data} & \\
+\hline
+\end{DoxyParams}
+Se crea un nuevo nodo con el valor indicado.
+
+Si head es nulo, se define el nuevo nodo como la cabeza de la lista.
+
+entonces se incrementa el tamaño de la lista.
+
+si no, entonces se define el siguiente nodo del nuevo nodo como head.
+
+y se define el nuevo nodo como head de la lista.\mbox{\Hypertarget{class_list_a8bd34457b738fc2f7c8ca376f3cf1bf5}\label{class_list_a8bd34457b738fc2f7c8ca376f3cf1bf5}} 
+\index{List@{List}!insertLast@{insertLast}}
+\index{insertLast@{insertLast}!List@{List}}
+\doxysubsubsection{\texorpdfstring{insertLast()}{insertLast()}}
+{\footnotesize\ttfamily void List\+::insert\+Last (\begin{DoxyParamCaption}\item[{int}]{data }\end{DoxyParamCaption})}
+
+
+
+Luego se elimina un nodo value de la lista y se imprimen los valores de todos los nodos de la Lista. 
+
+Método para insertar un nuevo nodo al final de la lista.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em data} & se inserta al final, principio de la lista.\\
+\hline
+{\em data} & \\
+\hline
+\end{DoxyParams}
+Creación de un nuevo nodo con el valor indicado.
+
+Si head es nulo, se define el nuevo nodo como nuevo head en la lista.
+
+Entonces se incrementa el tamaño de la lista.
+
+si no entonces recorre la lista hasta encontrar el último nodo y se define el nuevo nodo como el siguiente.\mbox{\Hypertarget{class_list_aaa21c2630d821e1b6d718939338b8694}\label{class_list_aaa21c2630d821e1b6d718939338b8694}} 
+\index{List@{List}!printList@{printList}}
+\index{printList@{printList}!List@{List}}
+\doxysubsubsection{\texorpdfstring{printList()}{printList()}}
+{\footnotesize\ttfamily void List\+::print\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+print\+List recorre la lista. 
+
+\begin{DoxyReturn}{Devuelve}
+cada valor y su dirección de memoria. 
+\end{DoxyReturn}
+verifica si se encuentra la lista vacía. \begin{DoxyReturn}{Devuelve}
+mensaje que lo indica y devuelve la función.
+\end{DoxyReturn}
+Recorre la lista. Cuando temp es nulo, termina el bucle y la función se devuelve. \begin{DoxyReturn}{Devuelve}
+en cada iteración imprime el valor y dirección de memoria de temp.
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentación de las funciones relacionadas y clases amigas}
+\mbox{\Hypertarget{class_list_a85a0fc5a617106954db31a0e1233517f}\label{class_list_a85a0fc5a617106954db31a0e1233517f}} 
+\index{List@{List}!Collector@{Collector}}
+\index{Collector@{Collector}!List@{List}}
+\doxysubsubsection{\texorpdfstring{Collector}{Collector}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_collector}{Collector}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Gollo/\+CLion\+Projects/\+Practicas\+Datos2/aplicacion/\mbox{\hyperlink{_list_8h}{List.\+h}}\item 
+C\+:/\+Users/\+Gollo/\+CLion\+Projects/\+Practicas\+Datos2/aplicacion/\mbox{\hyperlink{_list_8cpp}{List.\+cpp}}\end{DoxyCompactItemize}

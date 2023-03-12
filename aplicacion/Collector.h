@@ -19,6 +19,9 @@
  * @brief se declara la clase Node y comienza la definición de la clase Collector.
  */
 class Node;
+/**
+ * @brief Definición de Collector
+ */
 class Collector {
 
 /**
